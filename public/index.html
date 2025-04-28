@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl" class="dark">
+<html lang="en" dir="rtl" class="">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,6 +67,17 @@
           d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25"
         />
       </symbol>
+      <symbol
+        id="chevron-left"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+      </symbol>
     </svg>
     <header
       class="fixed top-9 right-0 left-0 flex justify-center w-[90%] h-24 px-10 py-5 mx-auto bg-black/50 rounded-3xl"
@@ -115,7 +126,7 @@
           <!-- Cart Icon & Theme Switch Btn -->
           <div class="flex items-center gap-x-5">
             <!-- cart -->
-            <div>
+            <div class="relative group">
               <!-- cart Icon Hover -->
               <div class="py-3">
                 <svg class="w-8 h-8">
@@ -123,15 +134,35 @@
                 </svg>
               </div>
               <!-- Cart Box  -->
-              <div></div>
+              <div
+                class="absolute left-0 top-full opacity-0 invisible group-hover:opacity-100 w-[400px] group-hover:visible bg-white dark:bg-zinc-600 border-t-[3px] border-t-orange-300 shadow-normal transition-all rounded-2xl"
+              >
+                <!-- Cart Header -->
+                <div class="flex items-center justify-between text-xs tracking-tighter">
+                  <span class="text-gray-300">1 مورد</span>
+                  <a href="#" class="flex items-center">
+                    مشاهده سبد خرید
+                    <svg class="w-5 h-5">
+                      <use href="#chevron-left"></use>
+                    </svg>
+                  </a>
+                </div>
+                <!-- Cart Body -->
+                <div></div>
+                <!-- Cart Footer -->
+                <div></div>
+              </div>
             </div>
 
             <!-- Theme Switch Btn -->
-            <span>
-              <svg class="w-8 h-8">
+            <div class="cursor-pointer toggle-theme">
+              <svg class="inline-block dark:hidden w-8 h-8">
                 <use href="#moon"></use>
               </svg>
-            </span>
+              <svg class="hidden dark:inline-block w-8 h-8">
+                <use href="#sun"></use>
+              </svg>
+            </div>
           </div>
           <!-- Divide Border -->
           <span class="block w-px h-14 bg-white/20"></span>
@@ -147,6 +178,5 @@
       </div>
     </header>
   </body>
-
   <script src="scripts/app.js"></script>
 </html>
