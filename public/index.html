@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="rtl" class="">
+<html lang="en" dir="rtl" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,32 +79,22 @@
             <img src="images/app-logo.png" alt="Golden coffee" />
           </div>
           <!-- Menu -->
-          <ul class="flex gap-x-9 text-xl text-gray-300 tracking-tightest">
-            <li class="text-orange-200">
+          <ul class="flex gap-x-9 text-xl text-gray-300 tracking-tightest child:leading-[56px]">
+            <li class="text-orange-300">
               <a href="#">صفحه اصلی</a>
             </li>
-            <li>
-              <a href="#"> فروشگاه</a>
-              <ul class="hidden">
-                <li>
-                  <a href="#"> قهوه ویژه </a>
-                </li>
-                <li>
-                  <a href="#"> ویژه در سطح جهانی </a>
-                </li>
-                <li>
-                  <a href="#"> قهوه درجه یک </a>
-                </li>
-                <li>
-                  <a href="#"> ترکیبات تجاری </a>
-                </li>
-                <li>
-                  <a href="#"> کپسول قهوه </a>
-                </li>
-                <li>
-                  <a href="#"> قهوه زینو برزیلی </a>
-                </li>
-              </ul>
+            <li class="relative group">
+              <a href="#" class="group-hover:text-orange-300 transition-colors"> فروشگاه</a>
+              <div
+                class="transition-all opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full w-52 p-6 shadow-normall tracking-normal bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white border-t-[3px] border-t-orange-300 rounded-2xl child:transition-colors child-hover:text-orange-300 child:inline-block"
+              >
+                <a href="#"> قهوه ویژه </a>
+                <a href="#"> ویژه در سطح جهانی </a>
+                <a href="#"> قهوه درجه یک </a>
+                <a href="#"> ترکیبات تجاری </a>
+                <a href="#"> کپسول قهوه </a>
+                <a href="#"> قهوه زینو برزیلی </a>
+              </div>
             </li>
             <li>
               <a href="#"> دیکشنری</a>
@@ -123,13 +113,19 @@
         <!-- Cart & Theme Toggle , Login Link -->
         <div class="flex text-xl items-center text-orange-200 gap-2.5">
           <!-- Cart Icon & Theme Switch Btn -->
-          <div class="flex gap-x-5">
+          <div class="flex items-center gap-x-5">
             <!-- cart -->
             <div>
-              <svg class="w-8 h-8">
-                <use href="#shoping-cart"></use>
-              </svg>
+              <!-- cart Icon Hover -->
+              <div class="py-3">
+                <svg class="w-8 h-8">
+                  <use href="#shoping-cart"></use>
+                </svg>
+              </div>
+              <!-- Cart Box  -->
+              <div></div>
             </div>
+
             <!-- Theme Switch Btn -->
             <span>
               <svg class="w-8 h-8">
