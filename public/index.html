@@ -7,7 +7,7 @@
     <link rel="icon" href="./images/fav-icon.png" type="image/png" />
     <link rel="stylesheet" href="./styles/app.css" />
   </head>
-  <body class="font-Yekan bg-gray-100 dark:bg-zinc-800">
+  <body class="font-IRANSans bg-gray-100 dark:bg-zinc-800">
     <!-- All Pack Icons -->
     <svg class="hidden" xmlns="http://www.w3.org/2000/svg">
       <symbol id="shoping-cart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -80,24 +80,24 @@
       </symbol>
     </svg>
     <header
-      class="fixed top-9 right-0 left-0 flex justify-center w-[90%] h-24 px-10 py-5 mx-auto bg-black/50 rounded-3xl"
+      class="fixed top-9 right-0 left-0 w-[90%] h-24 px-5 lg:px-10 py-5 mx-auto bg-black/50 rounded-3xl lg:flex hidden justify-center"
     >
       <div class="flex items-center justify-between w-full">
         <!-- Logo & Menu -->
-        <nav class="flex items-center gap-x-9">
+        <nav class="flex items-center lg:gap-x-9 gap-x-5 h-14">
           <!-- Logo -->
-          <div>
+          <div class="shrink-0">
             <img src="images/app-logo.png" alt="Golden coffee" />
           </div>
           <!-- Menu -->
-          <ul class="flex gap-x-9 text-xl text-gray-300 tracking-tightest child:leading-[56px]">
+          <ul class="flex gap-x-5 lg:gap-x-9 text-xl text-gray-300 tracking-tightest child:leading-[56px]">
             <li class="text-orange-300">
               <a href="#">صفحه اصلی</a>
             </li>
             <li class="relative group">
               <a href="#" class="group-hover:text-orange-300 transition-colors"> فروشگاه</a>
               <div
-                class="transition-all opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full w-52 p-6 shadow-normall tracking-normal bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white border-t-[3px] border-t-orange-300 rounded-2xl child:transition-colors child-hover:text-orange-300 child:inline-block"
+                class="transition-all delay-75 opacity-0 invisible group-hover:opacity-100 group-hover:visible absolute top-full w-52 p-6 shadow-normall tracking-normal bg-white text-zinc-700 dark:bg-zinc-700 dark:text-white border-t-[3px] border-t-orange-300 rounded-2xl child:transition-colors child-hover:text-orange-300 child:inline-block"
               >
                 <a href="#"> قهوه ویژه </a>
                 <a href="#"> ویژه در سطح جهانی </a>
@@ -122,9 +122,9 @@
           </ul>
         </nav>
         <!-- Cart & Theme Toggle , Login Link -->
-        <div class="flex text-xl items-center text-orange-200 gap-2.5">
+        <div class="flex text-xl gap-x-4 lg:gap-x-5 xl:gap-x-10 items-center text-orange-200 gap-2.5">
           <!-- Cart Icon & Theme Switch Btn -->
-          <div class="flex items-center gap-x-5">
+          <div class="flex items-center gap-x-4 lg:gap-x-5">
             <!-- cart -->
             <div class="relative group">
               <!-- cart Icon Hover -->
@@ -135,7 +135,7 @@
               </div>
               <!-- Cart Box  -->
               <div
-                class="absolute left-0 top-full opacity-0 invisible group-hover:opacity-100 w-[400px] group-hover:visible bg-white dark:bg-zinc-600 border-t-[3px] border-t-orange-300 shadow-normal transition-all rounded-2xl"
+                class="absolute delay-75 left-0 top-full opacity-0 invisible group-hover:opacity-100 w-[400px] group-hover:visible bg-white dark:bg-zinc-600 border-t-[3px] border-t-orange-300 shadow-normal transition-all rounded-2xl p-8"
               >
                 <!-- Cart Header -->
                 <div class="flex items-center justify-between text-xs tracking-tighter">
@@ -148,12 +148,42 @@
                   </a>
                 </div>
                 <!-- Cart Body -->
-                <div></div>
+                <div
+                  class="mt-5 border-b border-b-gray-300 dark:border-b-white/10 divide-y divide-gray-100 dark:divide-white/10 child:py-5"
+                >
+                  <div class="flex gap-x-2.5">
+                    <img src="images/products/p1.png" class="w-30 h-30" alt="product 1" />
+                    <div class="flex flex-col justify-between">
+                      <h4 class="text-zinc-700 dark:text-white text-base line-clamp-2">
+                        قهوه اسپرسو بن مانو مدل پریسکا 250 گرمی
+                      </h4>
+                      <div>
+                        <span class="text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">
+                          14.500 تومان تخفیف
+                        </span>
+                        <div class="text-zinc-700 dark:text-white">175,000 <span class="text-sm">تومان</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <!-- Cart Footer -->
-                <div></div>
+                <div class="flex justify-between mt-5">
+                  <div>
+                    <span class="text-teal-600 dark:text-emerald-500 text-xs tracking-tighter">مبلغ قابل پرداخت</span>
+                    <div class="text-zinc-700 dark:text-white">
+                      350.000
+                      <span class="text-sm">تومان</span>
+                    </div>
+                  </div>
+                  <a
+                    href="#"
+                    class="flex w-[144px] h-14 items-center justify-center rounded-xl text-white -tracking-tighter bg-teal-600 hover:bg-teal-700 dark:bg-emerald-500 dark:hover:bg-emerald-600 transition-colors"
+                    >ثبت سفارش</a
+                  >
+                </div>
               </div>
             </div>
-
             <!-- Theme Switch Btn -->
             <div class="cursor-pointer toggle-theme">
               <svg class="inline-block dark:hidden w-8 h-8">
@@ -166,13 +196,12 @@
           </div>
           <!-- Divide Border -->
           <span class="block w-px h-14 bg-white/20"></span>
-
           <!-- Login Link -->
           <a href="#" class="flex items-center gap-x-2.5 tracking-tightest">
             <svg class="w-8 h-8">
               <use href="#arrow-right-start-on-rectangle"></use>
             </svg>
-            <span> ورود | ثبت نام</span>
+            <span class="hidden xl:inline"> ورود | ثبت نام</span>
           </a>
         </div>
       </div>
