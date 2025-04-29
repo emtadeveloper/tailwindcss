@@ -252,11 +252,17 @@
   .h-5 {
     height: calc(var(--spacing) * 5);
   }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
   .h-14 {
     height: calc(var(--spacing) * 14);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
   }
   .h-24 {
     height: calc(var(--spacing) * 24);
@@ -269,6 +275,9 @@
   }
   .w-5 {
     width: calc(var(--spacing) * 5);
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
   }
   .w-8 {
     width: calc(var(--spacing) * 8);
@@ -436,6 +445,9 @@
   .p-80 {
     padding: calc(var(--spacing) * 80);
   }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
@@ -558,6 +570,11 @@
       }
     }
   }
+  .md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
   .lg\:flex {
     @media (width >= 64rem) {
       display: flex;
@@ -671,6 +688,19 @@
   .dark\:text-white {
     &:where(.dark, .dark *) {
       color: var(--color-white);
+    }
+  }
+  .dark\:text-zinc-700 {
+    &:where(.dark, .dark *) {
+      color: var(--color-zinc-700);
+    }
+  }
+  .dark\:text-shadow-zinc-700 {
+    &:where(.dark, .dark *) {
+      --tw-text-shadow-color: oklch(37% 0.013 285.805);
+      @supports (color: color-mix(in lab, red, red)) {
+        --tw-text-shadow-color: color-mix(in oklab, var(--color-zinc-700) var(--tw-text-shadow-alpha), transparent);
+      }
     }
   }
   .dark\:hover\:bg-emerald-600 {
@@ -847,6 +877,15 @@
   inherits: false;
   initial-value: solid;
 }
+@property --tw-text-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-text-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
 @property --tw-leading {
   syntax: "*";
   inherits: false;
@@ -872,6 +911,8 @@
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
       --tw-outline-style: solid;
+      --tw-text-shadow-color: initial;
+      --tw-text-shadow-alpha: 100%;
       --tw-leading: initial;
     }
   }
