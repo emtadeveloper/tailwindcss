@@ -72,6 +72,42 @@
   }
 }
 
+@layer components {
+  .submenu {
+    @apply flex flex-col gap-y-3 pr-7 mt-3 text-sm text-zinc-600 dark:text-white;
+  }
+
+  .submenu--open {
+    @apply hidden;
+  }
+
+  .submenu__item--active::after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #fdba74;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  .submenu__item--active {
+    @apply relative text-orange-300 pr-2.5;
+  }
+
+  .overlay {
+    @apply md:hidden invisible opacity-0 fixed inset-ring-0 w-full h-full bg-black/40 z-10 transition-all;
+  }
+
+  .overlay--visible {
+    @apply visible opacity-100  transition-all;
+  }
+}
+
 @theme {
   --font-IRANSans: "IRANSans", sans-serif;
   --font-Yekan: "Yekan", sans-serif;
